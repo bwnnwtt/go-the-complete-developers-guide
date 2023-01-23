@@ -15,6 +15,7 @@ func main() {
 		f, err := os.Open(fn)
 		if err != nil {
 			fmt.Println("Error!", err)
+			os.Exit(1)
 		}
 		// reads the file and writes to stdout
 		io.Copy(os.Stdout, f)
